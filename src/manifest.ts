@@ -17,8 +17,8 @@ const manifest: PaperclipPluginManifestV1 = {
   version: PLUGIN_VERSION,
   displayName: "Jira",
   description:
-    "Connects Paperclip with Jira for bidirectional issue sync, workflow transitions, boards, sprints, and agent-driven issue management. Supports Jira Cloud, Server, and Data Center.",
-  author: "Paperclip",
+    "Connects your Tandem workspace with Jira for bidirectional issue sync, workflow transitions, boards, sprints, and agent-driven issue management. Supports Jira Cloud, Server, and Data Center.",
+  author: "Numux Tech Ltd",
   categories: ["connector", "automation"],
 
   capabilities: [
@@ -130,15 +130,15 @@ const manifest: PaperclipPluginManifestV1 = {
       },
       statusMapping: {
         type: "object",
-        title: "Status Mapping (Paperclip -> Jira)",
-        description: "Maps Paperclip statuses to Jira status names",
+        title: "Status Mapping (Tandem -> Jira)",
+        description: "Maps Tandem statuses to Jira status names",
         additionalProperties: { type: "string" },
         default: DEFAULT_CONFIG.statusMapping,
       },
       reverseStatusMapping: {
         type: "object",
-        title: "Reverse Status Mapping (Jira -> Paperclip)",
-        description: "Maps Jira status names to Paperclip statuses",
+        title: "Reverse Status Mapping (Jira -> Tandem)",
+        description: "Maps Jira status names to Tandem statuses",
         additionalProperties: { type: "string" },
         default: DEFAULT_CONFIG.reverseStatusMapping,
       },
@@ -150,7 +150,7 @@ const manifest: PaperclipPluginManifestV1 = {
       agentIdentityMap: {
         type: "object",
         title: "Agent Identity Map",
-        description: "Maps Paperclip agent IDs to Jira account IDs",
+        description: "Maps Tandem agent IDs to Jira account IDs",
         additionalProperties: { type: "string" },
         default: DEFAULT_CONFIG.agentIdentityMap,
       },
@@ -166,7 +166,7 @@ const manifest: PaperclipPluginManifestV1 = {
     {
       jobKey: JOB_KEYS.jiraReconcile,
       displayName: "Jira Reconciliation",
-      description: "Full bidirectional sync between Paperclip issues and Jira issues",
+      description: "Full bidirectional sync between Tandem issues and Jira issues",
       schedule: "*/15 * * * *",
     },
     {

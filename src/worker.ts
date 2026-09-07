@@ -1,3 +1,4 @@
+import { readSetupConfig } from "./setup-config.js";
 import {
   definePlugin,
   runWorker,
@@ -65,8 +66,12 @@ let services: ServiceContainer | null = null;
 
 // ── Config ───────────────────────────────────────────────────────────────────
 
+// The host keeps config per company and refuses config.get for a company
+// the plugin is not configured for; the plugin names the company it serves
+// (one per instance on a hosted workspace) and runs on the defaults until a
+// configuration arrives.
 async function getConfig(ctx: PluginContext): Promise<JiraConfig> {
-  const raw = await ctx.config.get();
+  const { config: raw } = await readSetupConfig<JiraConfig>(ctx);
   const stateConfig = await ctx.state.get({
     scopeKind: "instance",
     stateKey: "plugin-config",

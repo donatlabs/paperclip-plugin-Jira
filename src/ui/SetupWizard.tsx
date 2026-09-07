@@ -201,7 +201,7 @@ export function SetupWizard(props: SetupWizardProps) {
       )}
 
       {state.step === 3 && (
-        <WizardStep title="Status Mapping" description="Map Paperclip statuses to Jira workflow statuses." stepNumber={3} totalSteps={TOTAL_STEPS} canProceed={true} onNext={goNext} onBack={goBack}>
+        <WizardStep title="Status Mapping" description="Map Tandem statuses to Jira workflow statuses." stepNumber={3} totalSteps={TOTAL_STEPS} canProceed={true} onNext={goNext} onBack={goBack}>
           <StatusMappingEditor
             projectKey={state.projectKey}
             statusMapping={state.statusMapping}
@@ -230,7 +230,7 @@ export function SetupWizard(props: SetupWizardProps) {
             <div style={fieldLabel}>Conflict Strategy</div>
             <select style={selectInput} value={state.conflictStrategy} onChange={(e) => update({ conflictStrategy: e.target.value })}>
               <option value="last_write_wins">Last Write Wins</option>
-              <option value="paperclip_wins">Paperclip Wins</option>
+              <option value="paperclip_wins">Tandem Wins</option>
               <option value="jira_wins">Jira Wins</option>
             </select>
           </div>
