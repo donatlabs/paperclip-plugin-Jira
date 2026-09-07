@@ -50,7 +50,7 @@ export function StatusMappingEditor(props: StatusMappingEditorProps) {
   return (
     <div>
       <div style={card}>
-        <div style={label}>Paperclip → Jira</div>
+        <div style={label}>Tandem → Jira</div>
         <div style={{ marginTop: "8px" }}>
           {PAPERCLIP_STATUSES.map((pcStatus) => (
             <div key={pcStatus} style={fieldRow}>
@@ -71,7 +71,7 @@ export function StatusMappingEditor(props: StatusMappingEditorProps) {
       </div>
 
       <div style={card}>
-        <div style={label}>Jira → Paperclip</div>
+        <div style={label}>Jira → Tandem</div>
         <div style={{ marginTop: "8px" }}>
           {jiraStatuses.map((jiraStatus) => (
             <div key={jiraStatus.id} style={{ ...fieldRow, flexDirection: "row", alignItems: "center", gap: "12px" }}>

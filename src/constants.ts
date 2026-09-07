@@ -1,7 +1,7 @@
 // ─── Plugin Identity ─────────────────────────────────────────────────────────
 
 export const PLUGIN_ID = "paperclip.jira";
-export const PLUGIN_VERSION = "0.1.0";
+export const PLUGIN_VERSION = "0.2.0";
 
 // ─── UI Slot IDs ─────────────────────────────────────────────────────────────
 

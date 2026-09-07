@@ -148,7 +148,7 @@ export function JiraSettingsPage(props: PluginSettingsPageProps) {
             <div style={fieldLabel}>Conflict Strategy</div>
             <select style={selectInput} value={form.conflictStrategy} onChange={(e) => updateForm({ conflictStrategy: e.target.value })}>
               <option value="last_write_wins">Last Write Wins</option>
-              <option value="paperclip_wins">Paperclip Wins</option>
+              <option value="paperclip_wins">Tandem Wins</option>
               <option value="jira_wins">Jira Wins</option>
             </select>
           </div>

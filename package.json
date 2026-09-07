@@ -1,7 +1,7 @@
 {
-  "name": "@paperclipai/plugin-jira",
-  "version": "0.1.0",
-  "description": "Jira integration for Paperclip — syncs issues, boards, sprints, and workflows with the Paperclip platform",
+  "name": "@donatlabs/paperclip-plugin-jira",
+  "version": "0.2.0",
+  "description": "Jira integration for Paperclip \u2014 syncs issues, boards, sprints, and workflows with the Paperclip platform",
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
@@ -12,14 +12,14 @@
     "ui": "./dist/ui/"
   },
   "scripts": {
-    "build": "tsc && node ./scripts/build-ui.mjs",
+    "build": "tsc && node ./scripts/build-worker.mjs && node ./scripts/build-ui.mjs",
     "clean": "rm -rf dist",
     "test": "vitest run --config ./vitest.config.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@paperclipai/plugin-sdk": "^2026.318.0",
-    "@paperclipai/shared": "^2026.318.0"
+    "@paperclipai/plugin-sdk": "^2026.831.1",
+    "@paperclipai/shared": "^2026.831.1"
   },
   "devDependencies": {
     "esbuild": "^0.27.3",
@@ -43,5 +43,9 @@
     "sprints",
     "agile"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donatlabs/paperclip-plugin-Jira.git"
+  }
 }
