@@ -78,17 +78,21 @@ const manifest: PaperclipPluginManifestV1 = {
         title: "OAuth Client ID",
       },
       oauthClientSecretRef: {
-        type: "string",
+        // The host binds a secret as {type:"secret_ref", secretId}; an older
+        // host, and a person typing one in, give the secret's UUID. The SDK
+        // resolves either, so the schema must accept either — or the host
+        // refuses the config a platform writes.
+        type: ["string", "object"],
         format: "secret-ref",
         title: "OAuth Client Secret",
       },
       oauthRefreshTokenRef: {
-        type: "string",
+        type: ["string", "object"],
         format: "secret-ref",
         title: "OAuth Refresh Token",
       },
       apiTokenRef: {
-        type: "string",
+        type: ["string", "object"],
         format: "secret-ref",
         title: "API Token / PAT",
       },
@@ -143,7 +147,7 @@ const manifest: PaperclipPluginManifestV1 = {
         default: DEFAULT_CONFIG.reverseStatusMapping,
       },
       webhookSecretRef: {
-        type: "string",
+        type: ["string", "object"],
         format: "secret-ref",
         title: "Webhook Secret",
       },
