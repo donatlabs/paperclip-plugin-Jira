@@ -1,6 +1,6 @@
 {
   "name": "@donatlabs/paperclip-plugin-jira",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Jira integration for Paperclip \u2014 syncs issues, boards, sprints, and workflows with the Paperclip platform",
   "type": "module",
   "exports": {
